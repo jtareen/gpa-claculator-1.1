@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: darkcyan;
+
+}
+
+p{
+    padding: 2px 0 0 0;
+}
+
+.heading {
+    margin: 10px;
+}
+
+.heading h1,
+.heading h2 {
+    width: fit-content;
+    margin: auto;
+    padding: 5px;
+}
+
+.container {
+    background: darkcyan;
+    display: grid;
+}
+
+#back-btn{
+    position: relative;
+    width: 50px;
+    top: 13px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+h3 {grid-area: heading;}
+.subNo-input {grid-area: input;}
+.subNo-submit {grid-area: submit;}
+
+
+.subNo-input {
+    height: 30px;
+    text-align: center;
+}
+
+.btn {
+    height: 30px;
+    font-weight: bolder;
+    background: blueviolet;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black,-1px -1px 5px white;
+    transition: color .3s ease, box-shadow .3s ;
+}
+
+.btn:hover {
+    background-color: navy;
+}
+
+.ask {
+    display: grid;
+    grid-template-areas: 'heading heading heading heading'
+        'input input submit submit';
+    gap: 10px;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px #271702, -5px -5px 20px white;
+    margin: 60px auto;
+    padding: 5%;
+}
+
+.table.active {
+    display: inline-block;
+}
+
+.table {
+    display: none;
+    width: fit-content;
+    background-color: lightblue;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 5px 5px 20px #271702, -5px -5px 20px white;
+    border-radius: 35px;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 7px;
+    border: black;
+    width: fit-content;
+}
+
+.box {
+    text-align: center;
+    background-color: white;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+}
+
+#result, #buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#calculate-btn, #reset-btn{
+    width: 30%;
+    margin: 10px 10px;
+}
+
+.row-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 10px;
+    width: 150px;
+}
+
+#topRowBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+#topRowBox div{
+    margin: 1%;
+}
+
+
+.ask.hide {
+    display: none;
+}
