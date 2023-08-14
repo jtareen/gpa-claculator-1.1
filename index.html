@@ -6,22 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPA CALCULATOR</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e5eef97ef3.js" crossorigin="anonymous"></script>
     <script src="create.js"></script>
 </head>
 
 <body>
-
+    <header>
+        <div>
+            <h1>JTareen</h1>
+        </div>
+        <div id="menu"></div>
+    </header>
     <div class="heading">
-        <h1>GPA CALCULATOR</h1>
-        <h2>For <span style="color: floralwhite;">A/B+/B/C+/C/D+/D</span> system</h2>
+        <h3>GPA and CGPA calculator</h3>
+        <h3>for both  system</h3>
+        <h3 id="highlighted-heading">
+            <span style="color: yellow;">A/B+/B/C+/C/D+/D</span>
+            <span>and</span>
+            <span style="color: yellow;">A/A-/B+/B/B-</span>
+        </h3>
     </div>
-    <hr>
 
     <div class="container">
         <div class="ask">
-            <h3>ENTER THE NUMBER OF SUBJECTS</h3>
-            <input class="subNo-input" name="noOfsubjects" type="number">
-            <button class="subNo-submit btn" onclick="generateRows()">ENTER</button>
+            <div>
+                <h4>Enter the No of subjects</h4>
+                <h4>AND</h4>
+                <h4>Select the GPA calculating system</h4>
+            </div>
+            <div>
+                <input class="ask-info" name="noOfsubjects" type="number" placeholder="No. of Subjects">
+                <select class="ask-info" name="system-choice" id="system-choice">
+                    <option value="1">A/B+/B/C+/C/D+/D</option>
+                    <option value="2">A/A-/B+/B/B-</option>
+                </select>
+            </div>
+            <div style="width: 100%;"><button class="subNo-submit btn" onclick="generateRows()">ENTER</button></div>
         </div>
 
         <div class="table">
@@ -67,8 +87,44 @@
                 </div>
             </div>
         </div>
-
     </div>
+
+    <hr>
+
+    <div class="bottom">
+        <div id="dev-info">
+            <div class="info-sections">
+                <div id="info-content">
+                    <h3 style="padding-bottom: 5px;">About Developer</h3>
+                    <h5>This site was developed by Jawad Ahmed tareen</h5>
+                    <h5>Who is an undergraduate Computer Science student</h5>
+                    <h5>Studying in NUST Balochistan Campus</h5>
+                </div>
+                <div id="info-image">
+                    <img src="pic1.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <footer>
+        <div>
+            <p>&copy; JTareen 2023 <br>
+                developed by jawad Ahmed</p>
+        </div>
+        <div id="social-links">
+            <div class="social-link">
+                <a href=""><i class="fa-brands fa-facebook fa-2xl"></i></a>
+            </div>
+            <div class="social-link">
+                <a href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </div>
+            <div class="social-link">
+                <a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

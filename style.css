@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
-    background: darkcyan;
-
+header, footer{
+    background: lightblue;
+    padding: 1%;
 }
 
 p{
@@ -14,14 +14,17 @@ p{
 }
 
 .heading {
-    margin: 10px;
+    padding: 5%;
+    font-size: 2vw;
+    background: darkcyan;
 }
 
 .heading h1,
-.heading h2 {
+.heading h3 {
     width: fit-content;
     margin: auto;
     padding: 5px;
+    color: white;
 }
 
 .container {
@@ -37,15 +40,6 @@ p{
     border-radius: 20px;
 }
 
-h3 {grid-area: heading;}
-.subNo-input {grid-area: input;}
-.subNo-submit {grid-area: submit;}
-
-
-.subNo-input {
-    height: 30px;
-    text-align: center;
-}
 
 .btn {
     height: 30px;
@@ -65,15 +59,31 @@ h3 {grid-area: heading;}
 }
 
 .ask {
-    display: grid;
-    grid-template-areas: 'heading heading heading heading'
-        'input input submit submit';
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: lightblue;
     border-radius: 10px;
     box-shadow: 5px 5px 20px #271702, -5px -5px 20px white;
-    margin: 60px auto;
+    margin: 4% auto 10% auto;
     padding: 5%;
+}
+
+.ask div{
+    padding: 4% 0%;
+}
+
+.ask-info {
+    height: 30px;
+    text-align: center;
+    width: 49%;
+}
+
+.subNo-submit{
+    width: 60%;
 }
 
 .table.active {
@@ -143,4 +153,127 @@ td {
 
 .ask.hide {
     display: none;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 1%;
+    background: darkcyan;
+}
+
+#dev-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px #271702, -5px -5px 20px white;
+    padding: 1%;
+}
+
+.info-sections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.info-sections > div {
+    height: fit-content;
+    margin: 2px;
+}
+
+#info-content{
+    width: 80%;
+}
+
+#info-image{
+    width: 20%;
+}
+
+.info-sections img{
+    width: 90%;
+    border-radius: 8%;
+    box-shadow: 0 0 10px black;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: lightblue;
+}
+
+#social-links{
+    display: flex;
+    flex-direction: row;
+}
+
+#social-links div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+
+#social-links a{
+    color: darkcyan;
+}
+
+#social-links a:hover{
+    color: darkblue;
+}
+
+@media only screen and (max-width: 750px) {
+    header h1{
+        font-size: 7vw;
+    }
+    .heading{
+        font-size: 5vw;
+    }
+    #highlighted-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .heading span{
+        display: block;
+    }
+    .ask{
+        font-size: 4vw;
+        margin: 15% auto;
+    }
+    #dev-info{
+        width: 95%;
+    }
+    .info-sections{
+        flex-direction: column;
+    }
+    #info-image{
+        width: 95%;
+    }
+    #info-image img{
+        width: 30%;
+    }
+    #info-content{
+        width: 95%;
+    }
+    footer{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    footer div{
+        padding: 2%;
+    }
 }

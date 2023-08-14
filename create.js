@@ -1,10 +1,9 @@
-
-
 function generateRows() {
     const numOfSub = document.getElementsByName('noOfsubjects');
+    const system = document.getElementById('system-choice');
 
     if (Number(numOfSub[0].value) > 0 && Number(numOfSub[0].value) < 15) {
-        addrow(Number(numOfSub[0].value));
+        addrow(Number(numOfSub[0].value),Number(system.value));
     }
     else if (numOfSub[0].value == "") {
         alert("Please enter the number of Total subjects")
@@ -15,7 +14,7 @@ function generateRows() {
 
 }
 
-function addrow(num) {
+function addrow(num,system) {
     const ask = document.querySelector('.ask');
     const container = document.querySelector(".table");
 
@@ -74,43 +73,95 @@ function addrow(num) {
         gradeSlelector.classList.add('box');
         gradeSlelector.name = 'Grade';
 
-        const opt00 = document.createElement("option");
-        const opt01 = document.createElement("option");
-        const opt02 = document.createElement("option");
-        const opt03 = document.createElement("option");
-        const opt04 = document.createElement("option");
-        const opt05 = document.createElement("option");
-        const opt06 = document.createElement("option");
-        const opt07 = document.createElement("option");
-        const opt08 = document.createElement("option");
-        opt00.value = 0;
-        opt00.innerHTML = "select";
-        opt01.value = 4.0;
-        opt01.innerHTML = "A";
-        opt02.value = 3.5;
-        opt02.innerHTML = "B+";
-        opt03.value = 3.0;
-        opt03.innerHTML = "B";
-        opt04.value = 2.5;
-        opt04.innerHTML = "C+";
-        opt05.value = 2.0;
-        opt05.innerHTML = "C";
-        opt06.value = 1.5;
-        opt06.innerHTML = "D+";
-        opt07.value = 1.0;
-        opt07.innerHTML = "D";
-        opt08.value = 0.0;
-        opt08.innerHTML = "F";
+        if (system == 1) {
+            const opt00 = document.createElement("option");
+            const opt01 = document.createElement("option");
+            const opt02 = document.createElement("option");
+            const opt03 = document.createElement("option");
+            const opt04 = document.createElement("option");
+            const opt05 = document.createElement("option");
+            const opt06 = document.createElement("option");
+            const opt07 = document.createElement("option");
+            const opt08 = document.createElement("option");
+            opt00.value = 0;
+            opt00.innerHTML = "select";
+            opt01.value = 4.0;
+            opt01.innerHTML = "A";
+            opt02.value = 3.5;
+            opt02.innerHTML = "B+";
+            opt03.value = 3.0;
+            opt03.innerHTML = "B";
+            opt04.value = 2.5;
+            opt04.innerHTML = "C+";
+            opt05.value = 2.0;
+            opt05.innerHTML = "C";
+            opt06.value = 1.5;
+            opt06.innerHTML = "D+";
+            opt07.value = 1.0;
+            opt07.innerHTML = "D";
+            opt08.value = 0.0;
+            opt08.innerHTML = "F";
 
-        gradeSlelector.appendChild(opt00);
-        gradeSlelector.appendChild(opt01);
-        gradeSlelector.appendChild(opt02);
-        gradeSlelector.appendChild(opt03);
-        gradeSlelector.appendChild(opt04);
-        gradeSlelector.appendChild(opt05);
-        gradeSlelector.appendChild(opt06);
-        gradeSlelector.appendChild(opt07);
-        gradeSlelector.appendChild(opt08);
+
+            gradeSlelector.appendChild(opt00);
+            gradeSlelector.appendChild(opt01);
+            gradeSlelector.appendChild(opt02);
+            gradeSlelector.appendChild(opt03);
+            gradeSlelector.appendChild(opt04);
+            gradeSlelector.appendChild(opt05);
+            gradeSlelector.appendChild(opt06);
+            gradeSlelector.appendChild(opt07);
+            gradeSlelector.appendChild(opt08);
+        }
+        else {
+            const opt00 = document.createElement("option");
+            const opt01 = document.createElement("option");
+            const opt02 = document.createElement("option");
+            const opt03 = document.createElement("option");
+            const opt04 = document.createElement("option");
+            const opt05 = document.createElement("option");
+            const opt06 = document.createElement("option");
+            const opt07 = document.createElement("option");
+            const opt08 = document.createElement("option");
+            const opt09 = document.createElement("option");
+            const opt10 = document.createElement("option");
+            opt00.value = 0;
+            opt00.innerHTML = "select";
+            opt01.value = 4.0;
+            opt01.innerHTML = "A";
+            opt02.value = 3.67;
+            opt02.innerHTML = "A-";
+            opt03.value = 3.33;
+            opt03.innerHTML = "B+";
+            opt04.value = 3.0;
+            opt04.innerHTML = "B";
+            opt05.value = 2.67;
+            opt05.innerHTML = "B-";
+            opt06.value = 2.33;
+            opt06.innerHTML = "C+";
+            opt07.value = 2.0;
+            opt07.innerHTML = "C";
+            opt08.value = 1.67;
+            opt08.innerHTML = "C-";
+            opt09.value = 1.0;
+            opt09.innerHTML = "D";
+            opt10.value = 0.0;
+            opt10.innerHTML = "F";
+
+
+            gradeSlelector.appendChild(opt00);
+            gradeSlelector.appendChild(opt01);
+            gradeSlelector.appendChild(opt02);
+            gradeSlelector.appendChild(opt03);
+            gradeSlelector.appendChild(opt04);
+            gradeSlelector.appendChild(opt05);
+            gradeSlelector.appendChild(opt06);
+            gradeSlelector.appendChild(opt07);
+            gradeSlelector.appendChild(opt08);
+            gradeSlelector.appendChild(opt09);
+            gradeSlelector.appendChild(opt10);
+
+        }
 
         const output = document.createElement('p');
         output.classList.add('output');
@@ -139,6 +190,7 @@ function addrow(num) {
         table.appendChild(row);
     }
 }
+
 
 
 function calculateGPA() {
@@ -176,11 +228,11 @@ function calculateGPA() {
 
     }
     gpa = totalGradePoints / totalCH;
-    if( creditHoursBefore[0].value == '' || cgpaBefore[0].value  == '' ){
+    if (creditHoursBefore[0].value == '' || cgpaBefore[0].value == '') {
         cgpa = gpa;
     }
-    else{
-        cgpa = ( (cgpaB*chB) + (totalGradePoints) ) / (chB+totalCH);
+    else {
+        cgpa = ((cgpaB * chB) + (totalGradePoints)) / (chB + totalCH);
     }
 
     for (let i = 0; i < gpaResult.length; i++) {
@@ -189,7 +241,7 @@ function calculateGPA() {
     }
 }
 
-function reLoad(){
+function reLoad() {
     location.reload();
 }
 
@@ -202,12 +254,12 @@ function reset() {
     const cgpaBefore = document.getElementsByName('CGPABefore');
     const creditHoursBefore = document.getElementsByName('creditHoursBefore');
 
-    for(let i=0 ; i < grade.length ; i++){
+    for (let i = 0; i < grade.length; i++) {
         creditHours[i].value = 0;
         grade[i].value = 0;
         point[i].innerHTML = "";
         gpaResult[0].value = "";
-        cgpaResult[0].value = ""; 
+        cgpaResult[0].value = "";
         cgpaBefore[0].value = "";
         creditHoursBefore[0].value = "";
     }
