@@ -231,7 +231,7 @@ footer{
 }
 
 #social-links a:hover{
-    color: darkblue;
+    color: lightblue;
 }
 
 @media only screen and (max-width: 750px) {

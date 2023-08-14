@@ -265,3 +265,41 @@ function reset() {
     }
 
 }
+
+function instaHover(){
+    // const fbIcon = document.getElementById('fb-link');
+    // const linkedinIcon = document.getElementById('linkedin-link');
+    const instaIcon = document.getElementById('insta-link');
+    // fbIcon.style.background = "darkcyan";
+    // linkedinIcon.style.background = "darkcyan";
+    instaIcon.style.background = "darkcyan";
+}
+function instaReset(){
+    const instaIcon = document.getElementById('insta-link');
+    instaIcon.style.background = "lightblue";
+}
+
+function fbHover(){
+    // const fbIcon = document.getElementById('fb-link');
+    // const linkedinIcon = document.getElementById('linkedin-link');
+    const fbIcon = document.getElementById('fb-link');
+    // fbIcon.style.background = "darkcyan";
+    // linkedinIcon.style.background = "darkcyan";
+    fbIcon.style.background = "darkcyan";
+}
+function fbReset(){
+    const fbIcon = document.getElementById('fb-link');
+    fbIcon.style.background = "lightblue";
+}
+
+function linkedinHover(){
+    const linkedinIcon = document.getElementById('linkedin-link');
+    linkedinIcon.style.background = "darkcyan";
+}
+function linkedinReset(){
+    const linkedinIcon = document.getElementById('linkedin-link');
+    linkedinIcon.style.background = "lightblue";
+}
+
+
+
