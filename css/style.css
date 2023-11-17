@@ -17,20 +17,6 @@ p{
     padding: 2px 0 0 0;
 }
 
-.heading {
-    padding: 5%;
-    font-size: 2vw;
-    background: darkcyan;
-}
-
-.heading h1,
-.heading h3 {
-    width: fit-content;
-    margin: auto;
-    padding: 5px;
-    color: white;
-}
-
 .container {
     background: darkcyan;
     display: grid;
