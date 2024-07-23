@@ -13,9 +13,9 @@
 <body>
     <header>
         <div>
-            <h1 class="title">GPA and CGPA calculator</h1>
+            <h1 class="title">Calc+</h1>
         </div>
-        <div id="menu"></div>
+        <nav ></nav>
     </header>
     <!-- <div class="heading">
         <h3>GPA and CGPA calculator</h3>
@@ -26,17 +26,15 @@
             <span style="color: yellow;">A/A-/B+/B/B-</span>
         </h3>
     </div> -->
+    <hr style="width: 95%; align-self: center;">
 
-    <div class="container">
-        <div class="ask">
-            <div>
-                <h4>Enter the No of subjects</h4>
-            </div>
-            <div>
-                <input class="ask-info" name="noOfsubjects" type="number" placeholder="No. of Subjects">
-            </div>
-            <div style="width: 100%;"><button class="subNo-submit btn" onclick="generateRows()">ENTER</button></div>
-        </div>
+    <main class="container">
+        
+        <form id="suject-input-form" action="">
+            <h4>Enter the No. of Subjects</h4>
+            <input type="number" name="no-of-subjects" id="no-of-subjects" min="1" max="50" placeholder="No. of Subjects" required>
+            <input type="submit" name="sub-form-input-btn" id="sub-form-input-btn" class="btn" value="Enter" onclick="generateRows()">
+        </form>
 
         <div class="table">
             <button class="btn" id="back-btn" onclick="reLoad()">Back</button>
@@ -81,28 +79,29 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
 
-    <hr>
+
+    <hr style="width: 95%; align-self: center;">
+
     <footer>
         <div>
-            <p>&copy; JTareen 2023 <br>
-                developed by jawad Ahmed</p>
+            <p>&copy; JTareen 2024 <br>
+                developed by Jawad Ahmed</p>
         </div>
-        <div id="social-links">
-            <div id="fb-link">
+        <ul id="social-links">
+            <li id="fb-link">
                 <a onmouseout="fbReset()" onmouseover="fbHover()" href="https://github.com/jtareen" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-            </div>
-            <div id="linkedin-link">
+            </li>
+            <li id="linkedin-link">
                 <a onmouseout="linkedinReset()" onmouseover="linkedinHover()" href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            </div>
-            <div id="insta-link">
+            </li>
+            <li id="insta-link">
                 <a onmouseout="instaReset()" onmouseover="instaHover()" href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
-            </div>
-        </div>
+            </li>
+        </ul>
     </footer>
-
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 function generateRows() {
-    const numOfSub = document.getElementsByName('noOfsubjects');
+    const numOfSub = document.getElementsByName('no-of-subjects');
 
     if (Number(numOfSub[0].value) > 0 && Number(numOfSub[0].value) < 50) {
         addrow(Number(numOfSub[0].value));
@@ -10,11 +10,10 @@ function generateRows() {
     else {
         alert("please enter a valid number for subjects");
     }
-
 }
 
 function addrow(num) {
-    const ask = document.querySelector('.ask');
+    const ask = document.querySelector('#suject-input-form');
     const container = document.querySelector(".table");
 
     ask.classList.add('hide');

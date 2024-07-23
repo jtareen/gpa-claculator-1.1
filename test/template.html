@@ -8,21 +8,145 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e5eef97ef3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div>
             <h1 class="title">Calc+</h1>
         </div>
-        <nav ></nav>
+        <nav></nav>
     </header>
 
     <hr style="width: 95%; align-self: center;">
 
     <main>
-        <form id="suject-input-form" action="">
-            <h4>Enter the No. of Subjects</h4>
-            <input type="number" name="no-of-subjects" id="no-of-subjects" min="1" max="50" placeholder="No. of Subjects" required>
-            <input type="submit" name="sub-form-input-btn" id="sub-form-input-btn" class="btn" value="Enter">
+
+        <form action="" id="gpa-calc-form">
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Subject Name</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                    <th>Grade Point</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text"></td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="4.0">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1.0">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text"></td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="4.0">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1.0">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text"></td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="4.0">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1.0">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text"></td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="4.0">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1.0">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <div id="result">
+                <label for="gpa-result">Overall GPA</label>
+                <input id="gpa-result" name="gpa-result" type="number" readonly>
+            </div>
+            <div style="display: flex; justify-content: right; gap: 5px;">
+                <input type="reset" class="btn" id="reset-btn" value="Reset">
+                <input type="submit" class="btn" id="submit-btn" value="Calculate">
+            </div>
         </form>
     </main>
 
@@ -35,13 +159,18 @@
         </div>
         <ul id="social-links">
             <li id="fb-link">
-                <a onmouseout="fbReset()" onmouseover="fbHover()" href="https://github.com/jtareen" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a onmouseout="fbReset()" onmouseover="fbHover()" href="https://github.com/jtareen" target="_blank"><i
+                        class="fa-brands fa-github fa-2xl"></i></a>
             </li>
             <li id="linkedin-link">
-                <a onmouseout="linkedinReset()" onmouseover="linkedinHover()" href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a onmouseout="linkedinReset()" onmouseover="linkedinHover()"
+                    href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-2xl"></i></a>
             </li>
             <li id="insta-link">
-                <a onmouseout="instaReset()" onmouseover="instaHover()" href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a onmouseout="instaReset()" onmouseover="instaHover()"
+                    href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i
+                        class="fa-brands fa-instagram fa-2xl"></i></a>
             </li>
         </ul>
     </footer>

@@ -26,19 +26,28 @@ main{
     align-content: center;
 }
 
+form{
+    background-color: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0px 0px 10px -5px #a5b4fc;
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, select{
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    outline: none;
+}
+
 #suject-input-form{
     display: flex;
     flex-direction: column;
-    background-color: #f8fafc;
-    border: 1px solid #d1d5db;
-    width: 80%;
-    max-width: 400px;
     height: 8em;
-    border-radius: 10px;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto;
-    box-shadow: 0px 0px 10px -5px #a5b4fc;
 }
 
 #suject-input-form h4{
@@ -47,21 +56,22 @@ main{
 
 #suject-input-form input[type="number"]{
     width: 80%;
-    background-color: #f8fafc;
-    border: 1px solid #cbd5e1;
     border-radius: 5px;
     height: 2em;
     padding: 0.75em;
-    outline: none;
 }
 
 #suject-input-form input[type="number"]:focus{
     border: 2px solid #4f46e5;
 }
 
+#suject-input-form input[type="submit"]{
+    width: 25%;
+    padding: 0.35em 0.75em;
+    font-size: 0.9rem;
+}
+
 .btn{
-    padding: 0.25em 0.75em;
-    font-size: 1rem;
     color: #f8fafc;
     background-color: #4f46e5;
     border-radius: 5px;
@@ -70,9 +80,59 @@ main{
 
 .btn:hover{
     background-color: #6366f1;
+    margin: 0;
 }
 
+/*  */
 
+#gpa-calc-form{
+    padding: 1.5vh 2%;
+}
+
+table{
+    display: inline-block;
+    width: fit-content;
+    border-collapse: collapse;
+}
+
+main table th{
+    font-size: 0.9rem;
+}
+
+th, td{
+    padding: 2px;
+}
+
+table input, table select{
+    width: 100%;
+    padding: 0.25rem;
+}
+
+table input:focus, select:focus{
+    border: 1px solid #4f46e5;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#result input{
+    padding: 0.25rem;
+    margin: 0 0 5px;
+    flex: 1;
+    border: 1px solid #a0a5ab;;
+} 
+
+#reset-btn, #submit-btn{
+    width: 25%;
+    padding: 0.35em 0.75em;
+    font-size: 0.9rem;
+}
+
+/*  */
 
 footer{
     display: flex;

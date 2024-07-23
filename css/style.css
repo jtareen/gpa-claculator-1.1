@@ -1,80 +1,106 @@
+/* Global styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header, footer{
-    background: lightblue;
-    padding: 1%;
-}
+/* Body Styles */
 
-.title{
-    text-align: center;
-}
-
-p{
-    padding: 2px 0 0 0;
-}
-
-.container {
-    background: darkcyan;
-    display: grid;
-}
-
-#back-btn{
-    position: relative;
-    width: 50px;
-    top: 13px;
-    left: 10px;
-    border-radius: 20px;
-}
-
-
-.btn {
-    height: 30px;
-    font-weight: bolder;
-    background: blueviolet;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px black,-1px -1px 5px white;
-    transition: color .3s ease, box-shadow .3s ;
-}
-
-.btn:hover {
-    background-color: navy;
-}
-
-.ask {
+body{
+    height: max(600px, 100vh);
+    width: max(300px, 100%);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(175deg ,#a5b4fc  0%,#eef2ff 20% ,#eef2ff 80% ,#a5b4fc  100%);
+    font-family: sans-serif;
+    color: #020617;
+}
+
+/* Header Styles */
+
+header{
+    background: transparent;
+    color: #312e81;
+    padding: 5px 2.5%;
+}
+
+/* Main Subject number form styles */
+
+
+main{
+    flex: 1;
     text-align: center;
-    background-color: lightblue;
+    align-content: center;
+}
+
+#suject-input-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+    border: 1px solid #d1d5db;
+    width: 80%;
+    max-width: 400px;
+    height: 8em;
     border-radius: 10px;
-    box-shadow: 5px 5px 20px #271702, -5px -5px 20px white;
-    margin: 4% auto 10% auto;
-    padding: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px -5px #a5b4fc;
 }
 
-.ask div{
-    padding: 4% 0%;
+#suject-input-form h4{
+    font-weight: 500;
 }
 
-.ask-info {
-    height: 30px;
-    text-align: center;
-    width: 49%;
+#suject-input-form input[type="number"]{
+    width: 80%;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    height: 2em;
+    padding: 0.75em;
+    outline: none;
 }
 
-.subNo-submit{
-    width: 60%;
+#suject-input-form input[type="number"]:focus{
+    border: 2px solid #4f46e5;
 }
+
+
+#suject-input-form input[type="submit"]{
+    width: 25%;
+    padding: 0.35em 0.75em;
+    font-size: 0.9rem;
+}
+
+.btn{
+    color: #f8fafc;
+    background-color: #4f46e5;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #6366f1;
+}
+
+#suject-input-form.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .table.active {
     display: inline-block;
@@ -141,10 +167,6 @@ td {
 }
 
 
-.ask.hide {
-    display: none;
-}
-
 .bottom{
     display: flex;
     justify-content: center;
@@ -194,80 +216,50 @@ td {
     box-shadow: 0 0 10px black;
 }
 
+
+
+
+
+
+/* Footer styles */
 footer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
     align-items: center;
-    background: lightblue;
 }
 
-#social-links{
-    display: flex;
-    flex-direction: row;
+footer div{
+    text-align: center;
+    font-size: 0.75rem;
+    padding-bottom: 10px;
 }
 
-#social-links div{
+footer ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+footer ul li{
+    display: inline-block;
     height: 40px;
-    margin: 5px 10px;
-    border-radius: 10px;
-    color: darkcyan;
-
+    width: 40px;
+    color: #4338ca;
 }
 
-#social-links div:hover{
-    background: darkcyan;
-    color: lightblue;
-    cursor: pointer;
-}
-
-#social-links a{
+footer ul li a{
     color: inherit;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-@media only screen and (max-width: 750px) {
-    header h1{
-        font-size: 7vw;
-    }
-    .heading{
-        font-size: 5vw;
-    }
-    #highlighted-heading{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .heading span{
-        display: block;
-    }
-    .ask{
-        font-size: 4vw;
-        margin: 15% auto;
-    }
-    #dev-info{
-        width: 95%;
-    }
-    .info-sections{
-        flex-direction: column;
-    }
-    #info-image{
-        width: 95%;
-    }
-    #info-image img{
-        width: 30%;
-    }
-    #info-content{
-        width: 95%;
-    }
-    footer{
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    footer div{
-        padding: 2%;
-    }
+footer ul li a:hover{
+    color: #6366f1;
 }
