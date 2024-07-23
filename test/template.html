@@ -5,43 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e5eef97ef3.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
+    <header>
+        <div>
+            <h1 class="title">Calc+</h1>
+        </div>
+        <nav ></nav>
+    </header>
 
-    <div class="container">
-        <table>
-            <tr>
-                <th>No.</th>
-                <th>Subject Name</th>
-                <th>Credit Hours</th>
-                <th>Grade</th>
-                <th>Grade Point</th>
-            </tr>
-            <tr>
-                <td>
-                    <p class="num">1</p>
-                </td>
-                <td>
-                    <input class="box" type="text" >
-                </td>
-                <td>
-                    <select class="box" name="credithours">
-                        <option value="0">Select</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="box" name="Grade">
-                        <option value="0">Select</option>
-                    </select>
-                </td>
-                <td>
-                    <p class="output box"></p>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <hr style="width: 95%; align-self: center;">
+
+    <main>
+        <form id="suject-input-form" action="">
+            <h4>Enter the No. of Subjects</h4>
+            <input type="number" name="no-of-subjects" id="no-of-subjects" min="1" max="50" placeholder="No. of Subjects" required>
+            <input type="submit" name="sub-form-input-btn" id="sub-form-input-btn" class="btn" value="Enter">
+        </form>
+    </main>
+
+    <hr style="width: 95%; align-self: center;">
+
+    <footer>
+        <div>
+            <p>&copy; JTareen 2024 <br>
+                developed by Jawad Ahmed</p>
+        </div>
+        <ul id="social-links">
+            <li id="fb-link">
+                <a onmouseout="fbReset()" onmouseover="fbHover()" href="https://github.com/jtareen" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            </li>
+            <li id="linkedin-link">
+                <a onmouseout="linkedinReset()" onmouseover="linkedinHover()" href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            </li>
+            <li id="insta-link">
+                <a onmouseout="instaReset()" onmouseover="instaHover()" href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
