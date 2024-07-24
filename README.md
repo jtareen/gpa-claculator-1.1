@@ -1,4 +1,4 @@
-# GPA Calculator 1.1
+# GPA Calculator
 
 A simple web-based GPA calculator using HTML, CSS, and JavaScript.
 
