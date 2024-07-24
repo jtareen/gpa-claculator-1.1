@@ -116,6 +116,10 @@ table input:focus, select:focus{
     border: 1px solid #4f46e5;
 }
 
+table input:enabled:hover, select:hover{
+    cursor: pointer;
+}
+
 #result{
     display: flex;
     justify-content: center;
