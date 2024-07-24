@@ -1,9 +1,35 @@
 document.addEventListener('DOMContentLoaded', ()=>{
+    applySavedTheme();
     const SubNoform = document.getElementById('suject-input-form');
     const GradesForm = document.getElementById('gpa-calc-form');
+    const toggleButton = document.getElementById('toggle-theme');
+
     SubNoform.addEventListener('submit', generateRows);
     GradesForm.addEventListener('submit', calculateGPA);
+    if (toggleButton) {
+        toggleButton.addEventListener('click', toggleDarkMode);
+    }
 })
+
+// Function to apply the saved theme
+function applySavedTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    }
+}
+
+// Function to toggle the dark mode
+function toggleDarkMode() {
+    const bodyElement = document.body;
+    if (bodyElement.classList.contains('dark-mode')) {
+        bodyElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', '');
+    } else {
+        bodyElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    }
+}
 
 function generateRows(event) {
     event.preventDefault();

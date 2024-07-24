@@ -1,3 +1,22 @@
+:root{
+    --color-primary: #020617;
+    --color-secondary:  #4f46e5;
+    --color-secondary-hover: #6366f1;
+    --body-background-01: #eef2ff;
+    --body-background-02: #a5b4fc;
+    --form-background: #f8fafc;
+    --input-background: #f8fafc;
+    --input-color: #020617;
+    --input-focus-bg: #f8fafc;
+    --input-focus-border: #4f46e5;
+    --border: #d1d5db;
+    --form-shadow: #a5b4fc;
+    --btn-color: #f8fafc;
+    --hr-bg-color: white;
+
+    --mode-toogle-btn-size: 4.5vw;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,15 +28,32 @@ body{
     width: max(300px, 100%);
     display: flex;
     flex-direction: column;
-    background: linear-gradient(175deg ,#a5b4fc  0%,#eef2ff 20% ,#eef2ff 80% ,#a5b4fc  100%);
+    background: linear-gradient(175deg ,var(--body-background-02)  0%,var(--body-background-01) 20% ,var(--body-background-01) 80% ,var(--body-background-02)  100%);
     font-family: sans-serif;
-    color: #020617;
+    color: var(--color-primary);
 }
 
 header{
+    display: flex;
     background: transparent;
-    color: #312e81;
-    padding: 5px 2.5%;
+    color: var(--color-primary);
+    padding: 10px 2.5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url(../assets/sun-moon.svg);
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+}
+
+header button:hover{
+    opacity: 0.8;
 }
 
 main{
@@ -27,18 +63,19 @@ main{
 }
 
 form{
-    background-color: #f8fafc;
+    background-color: var(--form-background);
     border-radius: 10px;
-    border: 1px solid #d1d5db;
-    box-shadow: 0px 0px 10px -5px #a5b4fc;
+    border: 1px solid var(--border);
+    box-shadow: 0px 0px 10px -5px var(--form-shadow);
     width: 95%;
     max-width: 400px;
     margin: 0 auto;
 }
 
 input, select{
-    background-color: #f8fafc;
-    border: 1px solid #cbd5e1;
+    background-color: var(--input-background);
+    color: var(--input-color);
+    border: 1px solid var(--border);
     outline: none;
 }
 
@@ -62,7 +99,8 @@ input, select{
 }
 
 #suject-input-form input[type="number"]:focus{
-    border: 2px solid #4f46e5;
+    background-color: var(--input-focus-bg);
+    border: 2px solid var(--input-focus-border);
 }
 
 #suject-input-form input[type="submit"]{
@@ -72,14 +110,15 @@ input, select{
 }
 
 .btn{
-    color: #f8fafc;
-    background-color: #4f46e5;
+    color: var(--btn-color);
+    background-color: var(--color-secondary);
     border-radius: 5px;
     border: none;
 }
 
 .btn:hover{
-    background-color: #6366f1;
+    background-color: var(--color-secondary-hover);
+    cursor: pointer;
     margin: 0;
 }
 
@@ -113,7 +152,8 @@ table input, table select{
 }
 
 table input:focus, select:focus{
-    border: 1px solid #4f46e5;
+    background-color: var(--input-focus-bg);
+    border: 1px solid var(--input-focus-border);
 }
 
 table input:enabled:hover, select:hover{
@@ -131,13 +171,14 @@ table input:enabled:hover, select:hover{
     padding: 0.25rem;
     margin: 0 0 5px;
     flex: 1;
-    border: 1px solid #a0a5ab;;
+    border: 1px solid var(--border);
 } 
 
 #reset-btn, #submit-btn{
     width: 25%;
     padding: 0.35em 0.75em;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    font-weight: medium;
 }
 
 /*  */
@@ -166,7 +207,7 @@ footer ul li{
     display: inline-block;
     height: 40px;
     width: 40px;
-    color: #4338ca;
+    color: var(--color-secondary);
 }
 
 footer ul li a{
@@ -181,5 +222,30 @@ footer ul li a{
 }
 
 footer ul li a:hover{
-    color: #6366f1;
+    color: var(--color-secondary-hover);
+}
+
+hr{
+    width: 95%; 
+    align-self: center;
+    border: 1px solid var(--hr-bg-color);
+}
+
+/* Dark Mode */
+
+.dark-mode{
+    --color-primary: #f8fafc;
+    --color-secondary:  #4f46e5;
+    --color-secondary-hover: #6366f1;
+    --body-background-01: #1b1b1f;
+    --body-background-02: #1b1b1f;
+    --form-background: #202127;
+    --input-background: #3c3f44;
+    --input-color: #e2e8f0;
+    --input-focus-bg: #32363f;
+    --input-focus-border: #3c3f44;
+    --border: #1b1b1f;
+    --form-shadow: #1b1b1f;
+    --btn-color: #e2e8f0;
+    --hr-bg-color: black;
 }
