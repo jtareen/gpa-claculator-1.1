@@ -1,23 +1,16 @@
 function generateRows() {
     const numOfSub = document.getElementsByName('no-of-subjects');
 
-    if (Number(numOfSub[0].value) > 0 && Number(numOfSub[0].value) < 50) {
-        addrow(Number(numOfSub[0].value));
-    }
-    else if (numOfSub[0].value == "") {
-        alert("Please enter the number of Total subjects")
-    }
-    else {
-        alert("please enter a valid number for subjects");
-    }
+    addrow(Number(numOfSub[0].value));
 }
 
 function addrow(num) {
     const ask = document.querySelector('#suject-input-form');
-    const container = document.querySelector(".table");
+    const gpaForm = document.querySelector("#gpa-calc-form");
 
     ask.classList.add('hide');
-    container.classList.add('active');
+    gpaForm.classList.remove('hide');
+    /*
     const table = document.getElementById("table");
 
     for (let i = 0; i < num; i++) {
@@ -136,7 +129,7 @@ function addrow(num) {
         row.appendChild(col5);
 
         table.appendChild(row);
-    }
+    }*/
 }
 
 

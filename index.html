@@ -17,71 +17,64 @@
         </div>
         <nav ></nav>
     </header>
-    <!-- <div class="heading">
-        <h3>GPA and CGPA calculator</h3>
-        <h3>for both  system</h3>
-        <h3 id="highlighted-heading">
-            <span style="color: yellow;">A/B+/B/C+/C/D+/D</span>
-            <span>and</span>
-            <span style="color: yellow;">A/A-/B+/B/B-</span>
-        </h3>
-    </div> -->
+
     <hr style="width: 95%; align-self: center;">
 
     <main class="container">
-        
-        <form id="suject-input-form" action="">
+    
+        <form id="suject-input-form" class="">
             <h4>Enter the No. of Subjects</h4>
             <input type="number" name="no-of-subjects" id="no-of-subjects" min="1" max="50" placeholder="No. of Subjects" required>
             <input type="submit" name="sub-form-input-btn" id="sub-form-input-btn" class="btn" value="Enter" onclick="generateRows()">
         </form>
 
-        <div class="table">
-            <button class="btn" id="back-btn" onclick="reLoad()">Back</button>
-            <div id="topRowBox">
-                <p style="font-weight: bold;">If you are in first semester</p>
-                <p style="font-weight: bold;">Or want to calculate just GPA</p>
-                <p style="font-size: larger; font-weight: bolder; color: red;">Leave this portion blank </p>
-                <div>
-                    <label>Current CGPA &nbsp = </label>
-                    <input style="width: 50%;" class="box" name="CGPABefore" type="number">
-                </div>
-                <div>
-                    <label>CreditHours &nbsp = </label>
-                    <input style="width: 50%;" class="box" name="creditHoursBefore" type="number">
-                </div>
-            </div>
-            <hr>
+        <form id="gpa-calc-form" class="hide">
             <table>
-                <tbody id="table">
-                    <tr>
-                        <th>No.</th>
-                        <th>Subject Name</th>
-                        <th>Credit Hours</th>
-                        <th>Grade</th>
-                        <th>Grade Point</th>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>No.</th>
+                    <th>Subject Name</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                    <th>Grade Point</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><input type="text"></td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td><select id="credit-hours" name="credit-hours">
+                            <option value="0">select</option>
+                            <option value="4.0">A</option>
+                            <option value="3.5">B+</option>
+                            <option value="3.0">B</option>
+                            <option value="2.5">C+</option>
+                            <option value="2.0">C</option>
+                            <option value="1.5">D+</option>
+                            <option value="1.0">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
             </table>
-            <div id="buttons">
-                <button id="calculate-btn" class="btn" onclick="calculateGPA()">CALCULATE</button>
-                <button id="reset-btn" class="btn" onclick="reset()">RESET</button>
-            </div>
-            <hr>
             <div id="result">
-                <div class="row-bottom">
-                    <label>GPA &nbsp = &nbsp</label>
-                    <input style="width: 50%;" class="box" name="GPA" type="text" disabled>
-                </div>
-                <div class="row-bottom">
-                    <label>CGPA &nbsp = &nbsp</label>
-                    <input style="width: 50%;" class="box" name="CGPA" type="text" disabled>
-                </div>
+                <label for="gpa-result">Overall GPA</label>
+                <input id="gpa-result" name="gpa-result" type="number" readonly>
             </div>
-        </div>
+            <div style="display: flex; justify-content: right; gap: 5px;">
+                <input type="reset" class="btn" id="reset-btn" value="Reset">
+                <input type="submit" class="btn" id="submit-btn" value="Calculate" onclick="calculateGPA()">
+            </div>
+        </form>
     </main>
-
-
 
     <hr style="width: 95%; align-self: center;">
 
