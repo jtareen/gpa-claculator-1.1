@@ -1,11 +1,11 @@
+let numOfRows = 7;
+
 document.addEventListener('DOMContentLoaded', ()=>{
     applySavedTheme();
-    const SubNoform = document.getElementById('suject-input-form');
-    const GradesForm = document.getElementById('gpa-calc-form');
+    const cgpaForm = document.getElementById('cgpa-calc-form');
     const toggleButton = document.getElementById('toggle-theme');
 
-    SubNoform.addEventListener('submit', generateRows);
-    GradesForm.addEventListener('submit', calculateGPA);
+    cgpaForm.addEventListener('submit', calculateGPA);
     if (toggleButton) {
         toggleButton.addEventListener('click', toggleDarkMode);
     }
@@ -31,30 +31,18 @@ function toggleDarkMode() {
     }
 }
 
-function generateRows(event) {
-    event.preventDefault();
+function addrow(num = 3) {
+    const gpaForm = document.querySelector("#cgpa-calc-form");
 
-    const formData = new FormData(event.target)
-    let numOfSub = Number(formData.get('no-of-subjects'))
-
-    console.log(numOfSub)
-    console.log(typeof(numOfSub))
-
-    addrow(numOfSub);
-}
-
-function addrow(num) {
-    const ask = document.querySelector('#suject-input-form');
-    const gpaForm = document.querySelector("#gpa-calc-form");
-
-    ask.classList.add('hide');
-    gpaForm.classList.remove('hide');
+    console.log(numOfRows)
+    console.log(typeof(numOfRows))
 
     const table = document.getElementById("table");
 
     for (let i = 0; i < num; i++) {
+        numOfRows += 1;
         let string = '';
-        string += i + 1;
+        string += numOfRows;
 
         const no = document.createElement('th');
         no.innerText = string;
@@ -64,7 +52,6 @@ function addrow(num) {
         
         const chSlelector = document.createElement('select');
         chSlelector.name = "credit-hours";
-        chSlelector.setAttribute('id', 'credit-hours');
         const opt0 = document.createElement('option');
         const opt1 = document.createElement('option');
         const opt2 = document.createElement('option');
@@ -96,7 +83,6 @@ function addrow(num) {
 
         const gradeSlelector = document.createElement('select');
         gradeSlelector.name = 'grade';
-        gradeSlelector.setAttribute('id', 'grade')
         const opt00 = document.createElement("option");
         const opt01 = document.createElement("option");
         const opt02 = document.createElement("option");
@@ -161,27 +147,23 @@ function addrow(num) {
     }
 }
 
-
-
 function calculateGPA(event) {
     event.preventDefault()
 
     const creditHours = document.getElementsByName('credit-hours');
     const grade = document.getElementsByName('grade');
     const gradePoints = document.getElementsByName('grade-points');
-    //const cgpaBefore = document.getElementsByName('CGPABefore');
-    //const creditHoursBefore = document.getElementsByName('creditHoursBefore');
     const gpaResult = document.getElementById('gpa-result');
-    //const cgpaResult = document.getElementsByName('CGPA');
+    const cgpaResult = document.getElementById('cgpa-result');
+    const cgpaBefore = document.getElementById('prev-cgpa');
+    const creditHoursBefore = document.getElementById('ch-completed');
 
-
-
+    let cgpaB = Number(cgpaBefore.value);
+    let chB = Number(creditHoursBefore.value);
     let totalCH = 0.0;
     let totalGradePoints = 0.0;
-    //let cgpaB = Number(cgpaBefore[0].value);
-    //let chB = Number(creditHoursBefore[0].value);
     let gpa = 0.0;
-    //let cgpa = 0.0;
+    let cgpa = 0.0;
 
     let x = 0.0;
     let y = 0.0;
@@ -196,13 +178,14 @@ function calculateGPA(event) {
 
     }
     gpa = totalGradePoints / totalCH;
-    /*if (creditHoursBefore[0].value == '' || cgpaBefore[0].value == '') {
+
+    if (creditHoursBefore.value == '' || cgpaBefore.value == '') {
         cgpa = gpa;
     }
     else {
         cgpa = ((cgpaB * chB) + (totalGradePoints)) / (chB + totalCH);
-    }*/
+    }
 
-    gpaResult.value = gpa;
-    //cgpaResult[0].value = cgpa;
+    gpaResult.value = gpa.toFixed(2);
+    cgpaResult.value = cgpa.toFixed(2);
 }
