@@ -4,8 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA CALCULATOR</title>
+
+    <title>GPA Calculator</title>
+
+    
+    <meta name="description" content="A simple and intuitive GPA calculator that helps students calculate their Grade Point Average easily.">
+    <meta name="author" content="Jawad Ahmed Tareen">
+    <meta property="og:title" content="GPA Calculator">
+    <meta property="og:description" content="Easily calculate your GPA with our straightforward and user-friendly GPA calculator.">
+    <meta property="og:image" content="./assets/image.png">
+    <meta property="og:url" content="https://jtareen.github.io/gpa-claculator-1.1/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GPA Calculator">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="./css/style.css">
+
     <script src="https://kit.fontawesome.com/e5eef97ef3.js" crossorigin="anonymous"></script>
     <script src="./js/create.js"></script>
 </head>
@@ -19,229 +33,268 @@
     </header>
 
     <main class="container">
-        <form id="cgpa-calc-form" class="">
-            <div id="prev-info">
-                <label for="gpa-result">Previous CGPA :
-                    <input id="prev-cgpa" name="prev-cgpa" type="number" min="0" max="4" step="0.01">
-                </label>
-                <label for="ch-completed">Credit Hours :
-                    <input id="ch-completed" name="ch-completed" type="number" min="0" max="150">
-                </label>
-            </div>
-            <table id="table">
-                <tr>
-                    <th>No.</th>
-                    <th>Course Name</th>
-                    <th>Credit Hours</th>
-                    <th>Grade</th>
-                    <th>Grade Point</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>6</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-                <tr>
-                    <th>7</th>
-                    <td><input type="text"></td>
-                    <td><select name="credit-hours">
-                            <option value="0">select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                    </td>
-                    <td><select name="grade">
-                            <option value="0">select</option>
-                            <option value="4.0">A</option>
-                            <option value="3.5">B+</option>
-                            <option value="3.0">B</option>
-                            <option value="2.5">C+</option>
-                            <option value="2.0">C</option>
-                            <option value="1.5">D+</option>
-                            <option value="1.0">D</option>
-                            <option value="0">F</option>
-                        </select>
-                    </td>
-                    <td><input name="grade-points" type="text"></td>
-                </tr>
-            </table>
-            <div id="result">
-                <label for="gpa-result">GPA</label>
-                <input id="gpa-result" name="gpa-result" type="text" disabled>
-                <label for="cgpa-result">CGPA</label>
-                <input id="cgpa-result" name="cgpa-result" type="text" disabled>
-            </div>
-            <div id="result">
-            </div>
-            <div style="display: flex; justify-content: right; gap: 5px;">
-                <div id="add-more-btn">
-                    <button type="button" class="btn" onclick="addrow()">Add More Courses</button>
+        <section>
+            <form id="cgpa-calc-form" class="">
+                <h1>Previous CGPA</h1>
+                <div id="prev-info">
+                    <label for="gpa-result">Previous CGPA :
+                        <input id="prev-cgpa" name="prev-cgpa" type="number" min="0" max="4" step="0.01" value="3.32">
+                    </label>
+                    <label for="ch-completed">Credit Hours :
+                        <input id="ch-completed" name="ch-completed" type="number" min="0" max="150" value="34">
+                    </label>
                 </div>
-                <input type="reset" class="btn" id="reset-btn" value="Reset">
-                <input type="submit" class="btn" id="submit-btn" value="Calculate" onclick="">
-            </div>
-        </form>
+                <hr>
+                <table id="table">
+                    <caption>Current Semester Grades</caption>
+                    <tr>
+                        <th>No.</th>
+                        <th>Course Name</th>
+                        <th>Credit Hours</th>
+                        <th>Grade</th>
+                        <th>Grade Point</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td><input type="text" value="Maths-101"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5" selected>B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td><input type="text" value="English"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0" selected>B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td><input type="text" value="CS-102"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4" selected>4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0" selected>A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td><input type="text" value="Course 4"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td><input type="text" value="Course 5"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td><input type="text" value="Course 6"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td><input type="text" value="Course 7"></td>
+                        <td><select name="credit-hours">
+                                <option value="0">select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </td>
+                        <td><select name="grade">
+                                <option value="0">select</option>
+                                <option value="4.0">A</option>
+                                <option value="3.5">B+</option>
+                                <option value="3.0">B</option>
+                                <option value="2.5">C+</option>
+                                <option value="2.0">C</option>
+                                <option value="1.5">D+</option>
+                                <option value="1.0">D</option>
+                                <option value="0">F</option>
+                            </select>
+                        </td>
+                        <td><input name="grade-points" type="text" disabled></td>
+                    </tr>
+                </table>
+                <div id="result">
+                    <label for="gpa-result">GPA</label>
+                    <input id="gpa-result" name="gpa-result" type="text" disabled>
+                    <label for="cgpa-result">CGPA</label>
+                    <input id="cgpa-result" name="cgpa-result" type="text" disabled>
+                </div>
+                <div id="result">
+                </div>
+                <div style="display: flex; justify-content: right; gap: 5px;">
+                    <div id="add-more-btn">
+                        <button type="button" class="btn" onclick="addrow()">Add More Courses</button>
+                    </div>
+                    <input type="reset" class="btn" id="reset-btn" value="Reset">
+                    <input type="submit" class="btn" id="submit-btn" value="Calculate" onclick="">
+                </div>
+            </form>
+        </section>
+        <section>
+            <article id="instructions">
+                <h1>How to use</h1>
+                <p>Welcome to our GPA Calculator! Follow these simple steps to calculate your GPA and CGPA:</p>
+                <ol>
+                    <li><h2>Enter Your Previous CGPA</h2></li>
+                    <ul>
+                        <li><span>Previous CGPA:</span> Input your previous cumulative grade point average (CGPA).</li>
+                        <li><span>Credit Hours:</span> Enter the total number of credit hours you've completed before the current semester.</li>
+                        <li>If you only want to calculate your GPA for the current semester, you can leave these fields empty.</li>
+                    </ul>
+                    <li><h2>Input Your Current Semester Grades</h2></li>
+                    <p>For each course you're taking this semester:</p>
+                    <ul>
+                        <li><span>Course Name:</span> Input the name or code of the course (optional).</li>
+                        <li><span>Credit Hours:</span> Enter the credit hours associated with each course.</li>
+                        <li><span>Grade:</span> Select the grade you received for the course from the dropdown menu. The corresponding grade points will automatically populate based on the grading system.</li>
+                    </ul>
+                    <li><h2>Add More Courses (if needed)</h2></li>
+                    <ul>
+                        <li>Click on the "Add More Courses" button if you have more than seven courses to input. Additional fields will appear.</li>
+                    </ul>
+                    <li><h2>Calculate Your GPA and CGPA</h2></li>
+                    <ul>
+                        <li>Once all the necessary information is entered, click the <span>"Calculate"</span> button.</li>
+                        <li>Your GPA for the current semester and updated CGPA will be displayed below the table.</li>
+                    </ul>
+                    <li><h2>Reset Form</h2></li>
+                    <ul>
+                        <li>If you need to start over, click the <span>"Reset"</span> button to clear all fields and input new data.</li>
+                    </ul>
+                </ol>
+            </article>
+        </section>
     </main>
 
     <hr>
@@ -256,10 +309,12 @@
                 <a href="https://github.com/jtareen" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
             </li>
             <li id="linkedin-link">
-                <a href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/jawad-tareen-22349a145" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-2xl"></i></a>
             </li>
             <li id="insta-link">
-                <a href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="https://instagram.com/j_.tareen?igshid=ZDc4ODBmNjlmNQ==" target="_blank"><i
+                        class="fa-brands fa-instagram fa-2xl"></i></a>
             </li>
         </ul>
     </footer>
